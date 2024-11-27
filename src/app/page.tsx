@@ -5,19 +5,19 @@ import { LinksSection } from "@/components/links-section"
 
 const workItems: Item[] = [
   {
-    title: "Jatri",
-    role: "Backend Developer Intern",
-    period: "June 2023 - Aug 2023",
+    title: "jatri",
+    role: "backend developer intern",
+    period: "june 2023 - aug 2023",
     description:
-      "Worked on the backend of a ticketing application. Implemented APIs and payment gateway integration.",
+      "worked on the backend of a ticketing application. Implemented APIs and payment gateway integration.",
     href: "https://jatri.co",
   },
   {
     title: "100Devs",
-    role: "Full-stack developer",
-    period: "Sep 2022 - May 2023",
+    role: "full-stack developer",
+    period: "sep 2022 - may 2023",
     description:
-      "Worked on a team of 5 to build a full-stack app for a local business. Helped move their offline business online by implementing features like user authentication, business analytics, and real-time chat.",
+      "worked on a team of 5 to build a full-stack app for a local business. Helped move their offline business online by implementing features like user authentication, business analytics, and real-time chat.",
     href: "https://100devs.org",
   },
 ]

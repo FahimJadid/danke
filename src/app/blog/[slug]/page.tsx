@@ -27,10 +27,10 @@ export async function generateMetadata({ params }: PageProps) {
       description: post.metadata.description,
       publishedTime,
       type: "article",
-      url: `https://jadid.vercel.app/blog/${post.slug}`,
+      url: `https://fahimjadid.vercel.app/blog/${post.slug}`,
       images: [
         {
-          url: `https://jadid.vercel.app/og/blog?title=${post.metadata.title}`,
+          url: `https://fahimjadid.vercel.app/og/blog?title=${post.metadata.title}`,
         },
       ],
     },
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps) {
       card: "summary_large_image",
       creator: "@JadidFahim",
       images: [
-        `https://jadid.vercel.app/og/blog?title=${post.metadata.title}&top=${publishedTime}`,
+        `https://fahimjadid.vercel.app/og/blog?title=${post.metadata.title}&top=${publishedTime}`,
       ],
     },
   }
@@ -68,10 +68,10 @@ export default async function Post({ params }: PageProps) {
             datePublished: post.metadata.date,
             dateModified: post.metadata.date,
             description: post.metadata.description,
-            image: `https://jadid.vercel.app/og/blog?title=${
+            image: `https://fahimjadid.vercel.app/og/blog?title=${
               post.metadata.title
             }&top=${formatDate(post.metadata.date)}`,
-            url: `https://jadid.vercel.app/blog/${post.slug}`,
+            url: `https://fahimjadid.vercel.app/blog/${post.slug}`,
             author: {
               "@type": "Person",
               name: "Fahim Al Jadid",

@@ -38,7 +38,7 @@ export async function GET(request: Request) {
         }}
       >
         <img
-          src="https://jadid.vercel.app/jadid.jpg"
+          src="https://fahimjadid.vercel.app/jadid.jpg"
           style={{
             position: "absolute",
             bottom: "40px",

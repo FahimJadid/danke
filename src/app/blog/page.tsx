@@ -13,7 +13,7 @@ export default async function BlogPage() {
     <main className="animate-fade-in-up relative">
       <h1 className="text-4xl font-bold mb-8 text-white">
         <span className="text-[#39FF14] mr-2">#</span>
-        <ScrambleText text="blog" />
+        <ScrambleText text="feed" />
       </h1>
 
       <p className="hidden sm:block text-sm text-gray-400 mb-8">
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://jadid.vercel.app/og/home?title=blog",
+        url: "https://oglink.xyz/blog",
       },
     ],
   },

@@ -7,68 +7,97 @@ const projects = [
     title: "dash-smart-payment",
     description: "A modern payment solution built as a monorepo, providing seamless payment experiences for customers and merchants with real-time bank webhook functionality.",
     role: "creator",
-    period: "June 2022 - Present",
+    period: "full-stack application",
     achievements: [
-      "Customer application for end-users to manage accounts and make payments",
-      "Merchant application for businesses to accept payments and manage accounts",
-      "Bank webhook service for processing real-time banking events",
-      "Shared UI components for consistent design across applications",
-      "Authentication using NextAuth.js",
-      "Responsive design with Tailwind CSS"
+      "customer application for end-users to manage accounts and make payments",
+      "merchant application for businesses to accept payments and manage accounts",
+      "bank webhook service for processing real-time banking events",
+      "shared UI components for consistent design across applications",
+      "authentication using NextAuth.js",
+      "responsive design with Tailwind CSS"
     ],
-  
+
     technologies: [
-    "TypeScript",
-    "Next.js 15",
-    "Tailwind CSS",
-    "Prisma ORM",
-    "Recoil",
-    "NextAuth.js",
-    "PostgreSQL",
-    "Turborepo",
-    "Express.js",
-  ],
-  href: "https://github.com/FahimJadid/dash",
+      "typeScript",
+      "next.js 15",
+      "tailwind CSS",
+      "prisma ORM",
+      "recoil",
+      "nextAuth.js",
+      "postgreSQL",
+      "turborepo",
+      "express.js",
+    ],
+    href: "https://github.com/FahimJadid/dash",
   },
   {
-    title: "Video Streaming Backend",
-    description: "A robust backend service for video streaming applications, enabling user interactions and seamless media delivery.",
+    title: "surge blog",
+    description: "a full-stack application designed for creating, managing, and sharing blog posts. It features a robust backend built with modern web technologies for scalability and performance and a user-friendly frontend offering a responsive and intuitive interface.",
     role: "creator",
+    period: "full-stack application",
+    achievements: [ 
+      "Developed a customer application for end-users to manage accounts and interact with blog posts.",
+      "Implemented a role-based access system for contributors and administrators to manage blog content.",
+      "Designed a secure authentication flow using JWT for robust session management.",
+      "Built a feature-rich blog management system, including create, edit, delete, and bookmark functionality.",
+      "Integrated real-time content updates and dynamic routing for seamless user interaction.",
+      "Deployed a scalable backend leveraging Cloudflare Workers for serverless infrastructure.",
+    ],
+    
+    technologies: [
+      "hono",
+      "prisma",
+      "typescript",
+      "prisma ORM",
+      "cloudfare workers",
+      "react",
+      "react-router-dom",
+      "axios",
+      "shadcn",
+    ],
+    href: "https://github.com/FahimJadid/surge-blog",
+  },
+  {
+    title: "video streaming",
+    description: "a robust backend service for video streaming applications, enabling user interactions and seamless media delivery.",
+    role: "creator",
+    period: "backend application",
     achievements: [
-      "Implemented user authentication with bcrypt for secure password management",
-      "Designed video upload and streaming functionality using Cloudinary for efficient delivery",
-      "Developed interactive features like playlists, likes, comments, and subscriptions",
-      "Enhanced user experience with a personalized dashboard for video management"
+      "implemented user authentication with bcrypt for secure password management",
+      "designed video upload and streaming functionality using Cloudinary for efficient delivery",
+      "developed interactive features like playlists, likes, comments, and subscriptions",
+      "enhanced user experience with a personalized dashboard for video management"
     ],
     technologies: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Mongoose",
+      "node.js",
+      "express.js",
+      "mongoDB",
+      "mongoose",
       "bcrypt",
-      "Cloudinary",
-      "JWT",
+      "cloudinary",
+      "jwt",
       "multer"
     ],
     href: "https://github.com/FahimJadid/video-stream-backend",
   },
   {
-    title: "E-Commerce Application Backend",
-    description: "A comprehensive backend for e-commerce platforms, focusing on security, scalability, and advanced features.",
-    role: "developer",
+    title: "e-Commerce application",
+    description: "a comprehensive backend for e-commerce platforms, focusing on security, scalability, and advanced features.",
+    role: "creator",
+    period: "backend application",
     achievements: [
-      "Built secure user authentication with role-based access control",
-      "Developed advanced product management features like filtering, sorting, and pagination",
-      "Implemented cart, order, and coupon functionalities for streamlined shopping experiences",
-      "Enhanced user interaction through wishlist, rating, and review systems"
+      "built secure user authentication with role-based access control",
+      "developed advanced product management features like filtering, sorting, and pagination",
+      "implemented cart, order, and coupon functionalities for streamlined shopping experiences",
+      "enhanced user interaction through wishlist, rating, and review systems"
     ],
     technologies: [
-      "Node.js",
-      "Express.js",
-      "MongoDB",
+      "bode.js",
+      "express.js",
+      "mongoDB",
       "bcrypt",
-      "JWT",
-      "Cloudinary",
+      "jwt",
+      "cloudinary",
       "multer",
       "nodemailer",
       "sharp"
@@ -76,15 +105,16 @@ const projects = [
     href: "https://github.com/FahimJadid/e-commerce-backend",
   },
   {
-    title: "Bkash Payment Gateway System",
-    description: "A backend service for Bkash integration to handle checkout processes via a URL-based system.",
-    role: "developer",
+    title: "bkash payment gateway system",
+    description: "a backend service for Bkash integration to handle checkout processes via a URL-based system.",
+    role: "creator",
+    period: "backend application",
     achievements: [
-      "Implemented token generation for secure transactions",
-      "Developed endpoints for creating and executing payments",
-      "Streamlined the integration for seamless payment processing"
+      "implemented token generation for secure transactions",
+      "developed endpoints for creating and executing payments",
+      "streamlined the integration for seamless payment processing"
     ],
-    technologies: ["Node.js", "Express.js", "Bkash API"],
+    technologies: ["node.js", "express.js", "bkash API"],
     href: "https://github.com/FahimJadid/bkash-payment-system-backend",
   }
 ]
@@ -116,7 +146,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://jadid.vercel.app/og/home?title=projects",
+        url: "https://fahimjadid.vercel.app/og/home?title=projects",
       },
     ],
   },

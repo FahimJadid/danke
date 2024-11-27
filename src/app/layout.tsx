@@ -12,16 +12,16 @@ const lexend = Lexend({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jadid.vercel.app/"),
+  metadataBase: new URL("https://fahimjadid.vercel.app/"),
   title: {
     default: "Fahim Al Jadid",
-    template: "%j | Fahim Al Jadid",
+    template: "Fahim Al Jadid",
   },
   description: "Full-stack Developer, and a Pharmacist.",
   openGraph: {
     title: "Fahim Al Jadid",
     description: "Full-stack Developer, and a Pharmacist.",
-    url: "https://jadid.vercel.app/",
+    url: "https://fahimjadid.vercel.app/",
     siteName: "Fahim Al Jadid",
     locale: "en_US",
     type: "website"
