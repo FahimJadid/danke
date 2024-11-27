@@ -1,0 +1,89 @@
+---
+title: "What are monorepos"
+description: "Journey of Monorepo"
+date: "November 1, 2024"
+---
+As the name suggests, a single repository (on github lets say) that holds all your frontend, backend, devops code. [example of a monorepos ](https://github.com/calcom/cal.com)
+
+![Cal.com repository](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F73f755cd-20e1-4a5d-8ae0-0970560ab864%2Fcal.png?table=block&id=14b7c3e9-c0a8-8047-81ea-ea0ae948a855&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&width=1420&userId=&cache=v2)
+
+Do you need to know them very well as a full stack engineer. Not exactly. Most of the times they are setup in the project already by the dev tools guy and you just need to follow the right practices.
+Good to know how to set one up from scratch though.
+
+
+## Why Monorepos?
+
+### Why not Simple folders?
+
+Why cant I just store services (backend, frontend etc) in various top level folders?
+You can, and you should if your -
+- Services are highly decoupled (don't share any code)
+- Services don’t depend on each other.
+For eg - A codebase which has a Golang service and a JS service
+
+![Separate codebase](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2Fef606844-504b-4239-ba2f-ff0eb35d559a%2FScreenshot_2024-03-16_at_2.54.08_AM.png?table=block&id=14b7c3e9-c0a8-8058-9e5c-c2610a5e58b3&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&width=1420&userId=&cache=v2)
+
+### Why not Simple folders?
+
+- Shared Code Reuse
+- Enhanced Collaboration
+- Optimized Builds and CI/CD: Tools like TurboRepo offer smart caching and task execution strategies that can significantly reduce build and testing times.
+- Centralized Tooling and Configuration: Managing build tools, linters, formatters, and other configurations is simpler in a monorepo because you can have a single set of tools for the entire project. 
+
+![Separate codebase](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2Fdabe4e60-4a1e-4226-a888-09777d814963%2FScreenshot_2024-03-16_at_2.55.59_AM.png?table=block&id=14b7c3e9-c0a8-80b6-afc6-fb7c291e61a2&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&width=1420&userId=&cache=v2)
+
+
+## Common monorepo framework in Node.js
+- [Lerna](https://lerna.js.org/)
+- [nx](https://github.com/nrwl/nx)
+- [Turborepo](https://turbo.build/) — Not exactly a monorepo framework
+- [Yarn/npm workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/)
+ 
+We’ll be going through turborepo since it’s the most relevant one today and provides more things (like build optimizations) that others don’t.
+
+![Turborepo](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F434c055a-7201-47b7-b415-222bcb4ae14e%2FScreenshot_2024-03-16_at_2.41.18_AM.png?table=block&id=14b7c3e9-c0a8-8027-85e2-c96881a57f2a&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&width=1420&userId=&cache=v2)
+
+
+## History of Turborepo
+- Created by Jared Palmer
+- In December 2021 Acquired by Vercel
+- Mild speculation/came from a random source - Pretty hefty deal
+- They’ve built a bunch of products, Turborepo is the most used one
+
+
+## Build system vs Build system orchestrator vs Monorepo framework
+- Build system:
+A build system automates the process of transforming source code written by developers into binary code that can be executed by a computer. For JavaScript and TypeScript projects, this process can include transpilation (converting TS to JS), bundling (combining multiple files into fewer files), minification (reducing file size), and more. A build system might also handle running tests, linting, and deploying applications.
+
+- Build system orchestrator:
+TurboRepo acts more like a build system orchestrator rather than a direct build system itself. It doesn't directly perform tasks like transpilation, bundling, minification, or running tests. Instead, TurboRepo allows you to define tasks in your monorepo that call other tools (which are the actual build systems) to perform these actions. 
+These tools can include anything from tsc, vite etc.
+
+- Monorepo framework:
+A monorepo framework provides tools and conventions for managing projects that contain multiple packages or applications within a single repository (monorepo). This includes dependency management between packages, workspace configuration.
+
+## Turborepo as a build system orchestrator
+Turborepo is a build system orchestrator . 
+The key feature of TurboRepo is its ability to manage and optimize the execution of these tasks across your monorepo. It does this through:
+- Caching: 
+TurboRepo caches the outputs of tasks, so if you run a task and then run it again without changing any of the inputs (source files, dependencies, configuration), TurboRepo can skip the actual execution and provide the output from the cache. This can significantly speed up build times, especially in continuous integration environments.
+
+- Parallelization: 
+It can run independent tasks in parallel, making efficient use of your machine's resources. This reduces the overall time needed to complete all tasks in your project.
+
+- Dependency Graph Awareness: 
+TurboRepo understands the dependency graph of your monorepo. This means it knows which packages depend on each other and can ensure tasks are run in the correct order.
+
+
+## Let’s initialize a simple Turborepo
+Ref - [https://turbo.build/repo/docs](https://turbo.build/repo/docs)
+
+- Initialize a Turborepo
+```bash
+npx create-turbo@latest
+```
+
+## Conclusion
+
+Monorepos are a great way to manage large codebases with multiple packages or applications. They provide benefits like shared code reuse, enhanced collaboration, and optimized builds. TurboRepo is a powerful tool that can help you manage and optimize your monorepo build process. By using TurboRepo, you can take advantage of caching, parallelization, and dependency graph awareness to speed up your builds and improve your development workflow.
+
