@@ -1,0 +1,60 @@
+---
+title: "Basics of SAP and ABAP - Application Server Architecture"
+description: "Application Server Architecture"
+date: "November 2, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+### Application Server Architecture
+
+- Dispatcher
+- Work Process
+- User Context
+- Roll Area
+
+![Application Server Architecture](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2Fe21cc401-875f-4e97-8b2d-73194ae089e5%2Fimage.png?table=block&id=14f7c3e9-c0a8-805e-8e42-de72334190b5&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&width=1390&userId=&cache=v2)
+
+### Dispatcher
+- All requests that come in from Presentation servers are directed first to Dispatcher
+- The Dispatcher writes them first to the Dispatcher queue
+- The dispatcher pulls the requests from the queue on a first-in, first-ot basis
+
+### Work Process
+- Each request from the dispatcher is then allocated to the first available work process 
+- A work process handles one request at a time
+- A work process needs to address two special memory areas - the user context and the program roll area
+
+### User Context
+- The user context is a memory area that contains information about the user
+- When a user logs on, a user context is allocated for that logon
+- When a user log off, it is freed
+
+### Roll Area
+- Roll area is a memory area that contains information about the programs execution
+- When a program runs, a roll area is allocated for that program
+- The roll area is freed when the program ends
+
+### SAP system landscape
+SAP system landscape consists of 3 systems
+    - Development
+    - Quality
+    - Production
+
+![SAP system landscape](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2Fbd546017-1818-495e-919a-078d8b73c554%2Fimage.png?table=block&id=14f7c3e9-c0a8-80dc-8306-d0c6d9370556&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&width=1290&userId=&cache=v2)    
+
+### Development
+- It is used for all developments and configurations.
+- The developments and configurations move from development system to quality system through a mechanism called as transport request.
+
+### Quality
+- The testing of all the developments and customizations needs be done in the quality system.
+- The developments and configurations move from quality system to production system through transport request.
+
+### Production
+- It is also called as live system or customer based system.
+- Customer runs his business through production system.
+
+
+
+
+

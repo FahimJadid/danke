@@ -1,0 +1,72 @@
+---
+title: "Basics of SAP and ABAP - ABAP Workbench and Transaction Code"
+description: "ABAP Workbench and Transaction Code"
+date: "November 4, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+### ABAP Workbench 
+
+- ABAP workbench is a collection of ABAP tools.
+- Examples : ABAP Dictionary , ABAP Editor , Function Builder , Class Builder etc.
+- One can access the ABAP workbench tools through transaction code.
+   - SE38 -> Program/Report
+   - SE11-> ABAP Dictionary
+   - SE37 -> Function Module
+   - SE24-> Class
+
+
+### Transaction Code 
+
+- Transaction Code is a shortcut to access the ABAP workbench tools(different applications) in SAP.
+- Examples :  SE11 - ABAP Dictionary , SE38 - ABAP Editor , SE37 - Function Builder , SE24 -  Class Builder etc.
+- /nxxxx - To call transaction xxxx( override the existing session)
+- /oxxxx - To call transaction xxxx in a new session
+- /n -        To cancel a session
+- /o -        Display on overview of sessions
+* Imp point :  A user can open a maximum of 6 sessions.
+
+
+![Log Off](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F579ffcdf-487d-448a-b064-ee0c3d2a8d23%2Fimage.png?table=block&id=14f7c3e9-c0a8-80be-9524-fdce0a8a0dc6&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&width=1080&userId=&cache=v2)
+
+### Log Off From SAP System 
+
+- System - Logoff
+- Transaction Code - /nend
+- Transaction Code - /nex 
+
+### Difference Between /nend & /nex 
+
+- /nend - Before log off , one confirmation pop-up appears. 
+- /nex -  Log off from SAP without confirmation pop-up. 
+
+
+### Roll Area
+- Roll area is a memory area that contains information about the programs execution
+- When a program runs, a roll area is allocated for that program
+- The roll area is freed when the program ends
+
+### SAP system landscape
+SAP system landscape consists of 3 systems
+    - Development
+    - Quality
+    - Production
+
+![SAP system landscape](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2Fbd546017-1818-495e-919a-078d8b73c554%2Fimage.png?table=block&id=14f7c3e9-c0a8-80dc-8306-d0c6d9370556&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&width=1290&userId=&cache=v2)    
+
+### Development
+- It is used for all developments and configurations.
+- The developments and configurations move from development system to quality system through a mechanism called as transport request.
+
+### Quality
+- The testing of all the developments and customizations needs be done in the quality system.
+- The developments and configurations move from quality system to production system through transport request.
+
+### Production
+- It is also called as live system or customer based system.
+- Customer runs his business through production system.
+
+
+
+
+

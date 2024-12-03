@@ -1,0 +1,43 @@
+---
+title: "Basics of SAP and ABAP - Contd. Package and Transport Request"
+description: "Contd. Package and Transport Request"
+date: "November 7, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+By the end of this session, you will have a clear understanding of how to create transport requests, create custom packages, and how objects are organized within these transport requests and packages.
+
+### Understanding Transport Requests
+
+A transport request is essentially a container that holds the changes and objects you want to transport from one SAP system to another. For instance, if you've developed a new program or modified a table in the development environment, you need to transport these changes to the testing or production environment.
+
+To create a transport request, we will use transaction code **SE09**. When you access this transaction, you will see an option to create a new transport request. Click on the 'Create' button, and you will be prompted to fill in some details.
+
+1. **Workbench Request:** When creating a transport request, you will typically create a workbench request. This is used to store workbench objects such as tables, programs, classes, functions, and modules.
+
+2. **Description:** It's a best practice to provide a meaningful description for your transport request. For example, you might use "Development objects" followed by your SAP login ID. This helps in identifying the purpose of the transport request later on.
+
+3. **Unique Number Generation:** Once you save the transport request, SAP will automatically generate a unique number for it. This number is essential for tracking and managing the transport request throughout its lifecycle.
+
+### Creating Packages
+Next, we will look at packages. A package is another important object in SAP. It is essentially a container for related development objects. To create a package, you will use transaction code **SE21**, also known as the Package Builder.
+
+1. **Naming Convention:** When creating a package, it is important to follow SAP's naming conventions. Customer-specific objects should start with 'Z' or 'Y', which distinguishes them from standard SAP objects.
+
+2. **Description:** Similar to transport requests, you should provide a short description for your package. This helps in understanding the purpose of the package at a glance.
+
+3. **Linking to Transport Requests:** When you create a package, you will also need to associate it with a transport request. It is advisable to use a dedicated transport request for each specific task to maintain organization and clarity.
+
+4. **Saving Objects:** When you create objects, you will be prompted to save them in a package. It's crucial to avoid saving objects as local objects, as these will not be included in the transport request and will not be transported to other systems.
+
+### Storing and Displaying Objects
+
+Now that you have created transport requests and packages, let's discuss how objects are stored and displayed.
+
+- **Object Navigator (Transaction Code SE80):** You can use the Object Navigator to create and manage your objects. Ensure that you save them in the correct package and transport request.
+
+- **Displaying Packages and Transport Requests:** You can view the contents of a package or transport request at any time. This will show you the package name and the objects stored within it, allowing you to manage your development objects effectively.
+
+### Conclusion
+In summary, understanding transport requests and packages is vital for anyone working with SAP and ABAP. By using transaction codes SC09 and SC21, you can create and manage transport requests and packages, ensuring that your development objects are organized and can be effectively transported across different SAP systems.
+

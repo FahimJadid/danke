@@ -35,10 +35,10 @@ export function Navbar() {
       }
 
       switch (event.key.toLowerCase()) {
-        case "h":
+        case "j":
           router.push("/")
           break
-        case "b":
+        case "f":
           router.push("/blog")
           break
         case "p":
