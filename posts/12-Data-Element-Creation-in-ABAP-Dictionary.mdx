@@ -1,0 +1,108 @@
+---
+title: "ABAP Dictionary - Data Element Creation"
+description: "Data Element Creation in ABAP Dictionary"
+date: "November 10, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+## Introduction
+**Data Element Creation** in the ABAP Dictionary. This session will build upon our previous topic of domain creation. We will demonstrate the process of creating five data elements, starting with the order number.
+
+---
+
+## Creating the First Data Element: Order Number
+
+### Step 1: Accessing the Data Element Creation
+1. **Open SAP GUI:** Launch your SAP GUI and log in.
+2. **Enter Transaction Code:** Type **SE11** in the command field and press **Enter**.
+
+### Step 2: Create a Data Element
+1. **Select Data Element Radio Button:** Choose the third radio button for Data Element.
+2. **Name the Data Element:**
+   - As per the naming convention, start the name with **'Z'** to denote it as a custom object.
+   - Use the format **'DE'** followed by a serial number (e.g., `ZDE001`).
+3. **Click on Create:** Click the 'Create' button to initiate the data element creation.
+
+### Step 3: Provide Description and Domain
+1. **Short Description:** Enter a brief description explaining the purpose of the data element.
+2. **Assign Domain:** Link the data element to the previously created domain for the order number.
+
+### Step 4: Purpose of Data Element
+- The numeric input field will automatically display a numeric value with a length of **10** due to the domain settings.
+
+### Step 5: Field Label Configuration
+1. **Field Label Tab:** Navigate to the Field Label tab to specify labels visible to the end user.
+2. **Enter Labels:** Provide short, medium, long, and heading labels as needed. The system will automatically calculate the lengths of these labels.
+
+### Step 6: Save, Check Syntax, and Activate
+1. **Save the Data Element:** Press **Control + S** to save.
+2. **Syntax Check:** Press **Control + F2** to check for syntax errors.
+3. **Activate:** Press **Control + F3** to activate the data element.
+
+### Step 7: Note Down for Reference
+- After activation, make a note of the data element for future reference.
+
+---
+
+## Creating the Second Data Element: Order Date
+
+### Step 1: Initiate Creation
+1. **Create Second Data Element:** Click the Create button for a new data element.
+2. **Meaningful Name:** Assign a meaningful name for the order date.
+
+### Step 2: Assign Domain
+- Use the previously created domain for the order date, which will automatically set the type and length.
+
+### Step 3: Field Label Assignment
+1. **Field Label Tab:** Assign "Order Date" as the label.
+2. **Save and Activate:** Save, check syntax, and activate the data element.
+
+---
+
+## Creating the Third Data Element: Payment Mode
+
+### Step 1: Initiate Creation
+1. **Create Third Data Element:** Start the creation process for the payment mode.
+2. **Name the Data Element:** Assign a name indicating it is for payment mode.
+
+### Step 2: Assign Domain
+- Link the domain created for payment mode, which will automatically set the character length to **1**.
+
+### Step 3: Field Label Configuration
+1. **Field Label Tab:** Set "Payment Mode" for the field labels.
+2. **Save and Activate:** Save, perform a syntax check, and activate the data element.
+
+---
+
+## Creating the Fourth Data Element: Total Amount
+
+### Step 1: Initiate Creation
+1. **Create Fourth Data Element:** Begin the creation for the total amount.
+2. **Name the Data Element:** Use a descriptive name for the total amount.
+
+### Step 2: Assign Domain
+- The domain for this data element has two decimal places, automatically applied.
+
+### Step 3: Field Label Configuration
+1. **Field Label Tab:** Set "Total Amount" as the label.
+2. **Save and Activate:** Use **Ctrl+S**, **Ctrl+F2**, and **Ctrl+F3** to save, check syntax, and activate.
+
+---
+
+## Creating the Fifth Data Element: Currency
+
+### Step 1: Initiate Creation
+1. **Create Fifth Data Element:** Start the creation process for the currency.
+2. **Name the Data Element:** Provide a short description for the currency data element.
+
+### Step 2: Assign Domain
+- Assign the previously created domain for currency.
+
+### Step 3: Field Label Assignment
+1. **Field Label Tab:** Set "Currency" for short, medium, long, and heading fields.
+2. **Save and Test:** Save and test using **Ctrl+S**, **Ctrl+F2**, and the test option.
+
+---
+
+## Summary
+In this tutorial, we created five data elements, each linked to their respective domains and assigned field labels. The data elements created will be used in the next session for table creation

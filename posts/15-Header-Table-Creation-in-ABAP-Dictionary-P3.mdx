@@ -1,0 +1,84 @@
+---
+title: "ABAP Dictionary - Header Table Creation (Part 3)"
+description: "Header Table Creation in ABAP Dictionary"
+date: "November 11, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+## Introduction
+Hello everyone! In this video, we will continue our discussion on **Header Table Creation**. In previous sessions, we learned how to create a table. Now, we will focus on how to maintain the data in that table. This includes how to insert records, update records, and delete records. The term "maintenance" refers to these three operations: insertion, deletion, and updation.
+
+---
+
+## Step 1: Inserting Records into the Table
+
+1. **Accessing Change Mode**
+   - First, we need to switch to the change mode of the table. 
+
+2. **Creating New Entries**
+   - Navigate to **Utilities > Table Contents > Create Entries**.
+   - You will see the client number (e.g., 800) automatically populated. 
+   - Enter the following details for the first record:
+     - **Order Number:** 1
+     - **Order Date:** (Select a date)
+     - **Payment Mode:** Credit Card (Use F4 help to select)
+     - **Total Amount:** 500
+     - **Currency:** INR
+   - Click on the **Save** button. You should see a message indicating that the database record was successfully created.
+
+3. **Inserting Another Record**
+   - Repeat the process to insert a second record:
+     - **Order Number:** 2
+     - **Order Date:** (Select a date)
+     - **Payment Mode:** Debit Card
+     - **Total Amount:** 1000
+     - **Currency:** INR
+   - Click on **Save** again. You will see the success message.
+
+---
+
+## Step 2: Viewing Records in the Table
+
+1. **Viewing the Table Contents**
+   - To view the records you just inserted, you can use the shortcut **Control + Shift + F10** to open the contents screen.
+   - Click on **Execute** to display the records. You should see the two records you added.
+
+2. **Alternative Method to View Records**
+   - You can also use **Utilities > Table Contents > Display** (shortcut: Control + Shift + F10) to see the same records.
+
+---
+
+## Step 3: Updating Records
+
+1. **Changing Non-Primary Key Data**
+   - To change the contents of the first row, select the row and click on the **Change** button.
+   - Update the order date to a new date (e.g., March 1).
+   - Click **Save**. Note that you can only change non-primary key data. The primary key (order number) cannot be altered.
+
+---
+
+## Step 4: Deleting Records
+
+1. **Deleting a Record**
+   - To delete a particular record, select the record and click on **Table Entry > Delete**.
+   - A prompt will ask if you want to delete the record. Confirm the deletion. You should now see that the table has only one record remaining.
+
+---
+
+## Step 5: Using Transaction Codes for Data Maintenance
+
+1. **Using SE16 for Data Browser**
+   - You can also manage records using the transaction code **SE16**. Enter the table name and click the button to create entries.
+   - The same screen will appear, allowing you to enter new records.
+
+2. **Re-Adding a Deleted Record**
+   - If you deleted the second record, you can re-add it by entering the order number and other details again. Click **Save** to create the record.
+
+3. **Using SE16N**
+   - **SE16N** is a newer version of SE16. Enter the table name and click **Execute**.
+   - You can create, change, or delete records in the same manner as SE16.
+
+---
+
+## Conclusion
+In this session, we learned how to maintain data in our header table through insertion, deletion, and updating of records. We explored different transaction codes like SE16 and SE16N for managing table data. In our next video, we will cover additional topics related to table management. Thank you for your attention!

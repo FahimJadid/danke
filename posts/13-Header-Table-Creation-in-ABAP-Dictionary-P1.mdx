@@ -1,0 +1,104 @@
+---
+title: "ABAP Dictionary - Header Table Creation (Part 1)"
+description: "Header Table Creation in ABAP Dictionary"
+date: "November 11, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+## Introduction
+Welcome to today's tutorial on **Creating an Order Header Table** in SAP. In this session, we will learn how to create a database table using previously created domains and data elements. This will provide a structured way to store order-related data.
+
+---
+
+## Step 1: Accessing Table Creation
+
+1. **Open SAP GUI:** Launch your SAP GUI and log in.
+2. **Enter Transaction Code:** Type **SE11** in the command field and press **Enter**.
+3. **Select Database Table:** Choose the first radio button labeled "Database Table".
+
+---
+
+## Step 2: Naming the Table
+
+1. **Table Name:** Enter a meaningful name for the table, such as **`ZORDER_HEADER`** (using 'Z' to indicate a custom object).
+2. **Short Description:** Provide a description for the table, such as **"Order Header Table"**.
+
+---
+
+## Step 3: Setting Table Attributes
+
+1. **Delivery Class:**
+   - Select a delivery class from the available options. For this tutorial, choose **Option "A"**.
+   
+2. **Data Browser/Table View Editing Options:**
+   - Choose the option **"Display Maintenance Allowed"** for the data browser/table view editing.
+
+---
+
+## Step 4: Adding Fields to the Table
+
+### Adding the First Column: Client Number
+
+1. **Navigate to Fields Tab:** Click on the "Fields" tab to add columns to the table.
+2. **First Field Name:** Enter **`MANDT`** for the client number.
+3. **Assign Data Element:** Assign the data element **`MANDT`** to this field.
+   - Note: The data element **`MANDT`** starts with "M", indicating it is a SAP standard data element with a domain of type **CL** (Client) and length **D3**.
+4. **Significance of Client Number:** This field will automatically take the client number of the SAP system (e.g., 800).
+
+---
+
+### Adding the Second Column: Order Number
+
+1. **Second Field Name:** Enter **`ONO`** for the order number.
+2. **Assign Data Element:** Assign the previously created data element for order number to this field.
+   - Note: The name does not need to start with 'Z' or 'Y', but it should be meaningful and concise.
+
+---
+
+### Adding the Third Column: Order Date
+
+1. **Third Field Name:** Enter **`ORDER_DATE`** for the order date.
+2. **Assign Data Element:** Assign the data element created for order date.
+   - The length and type from the domain will be automatically applied.
+
+---
+
+### Adding the Fourth Column: Payment Mode
+
+1. **Fourth Field Name:** Enter **`PAYMENT_MODE`** for the payment mode.
+2. **Assign Data Element:** Assign the data element created for payment mode.
+   - The character length of one will be automatically applied.
+
+---
+
+### Adding the Fifth Column: Total Amount
+
+1. **Fifth Field Name:** Enter **`TOTAL_AMOUNT`** for the total amount.
+2. **Assign Data Element:** Assign the data element created for total amount.
+   - The domain specifications, including currency and decimal places, will be automatically applied.
+
+---
+
+### Adding the Sixth Column: Currency
+
+1. **Sixth Field Name:** Enter **`CURRENCY`** for the currency.
+2. **Assign Data Element:** Assign the data element created for currency.
+
+---
+
+## Step 5: Finalizing Table Creation
+
+1. **Review Table Structure:** Ensure all fields have been added correctly with their respective data elements.
+2. **Save the Table:** Press **Control + S** to save the table structure.
+3. **Check Syntax:** Press **Control + F2** to check for any syntax errors.
+4. **Activate the Table:** Press **Control + F3** to activate the table.
+
+---
+
+## Summary and Next Steps
+
+- The table creation involves specifying the delivery class and display/maintenance options.
+- The data elements used in the table have associated domains that define their length and type.
+- In the next session, we will continue with additional configurations and functionalities related to the order header table.
+
+---

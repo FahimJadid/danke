@@ -1,0 +1,73 @@
+---
+title: "ABAP Dictionary - Header Table Creation (Part 2)"
+description: "Header Table Creation in ABAP Dictionary"
+date: "November 11, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+## Introduction
+Welcome back, everyone! In this session, we will continue our exploration of **Header Table Creation** in the ABAP Dictionary. We will focus on identifying key fields, particularly the primary key, and setting up technical settings for our table.
+
+---
+
+## Step 1: Understanding Primary Keys
+
+1. **Definition of Primary Key**
+   - A primary key is essential for uniquely identifying records in a table. It ensures that each record is distinct.
+
+2. **Example of Primary Key**
+   - In our order header table, the **order number** serves as the primary key. Just like an employee ID uniquely identifies an employee, the order number uniquely identifies an order.
+
+3. **Setting the Primary Key**
+   - To designate the order number as the primary key, select the checkbox next to it. Remember, primary keys should be positioned at the top of the table structure.
+
+4. **Including Additional Primary Keys**
+   - In our case, we will also consider **`MANDT`** (client number) as a primary key, although it will automatically populate based on the SAP system.
+
+---
+
+## Step 2: Configuring Technical Settings
+
+1. **Accessing Technical Settings**
+   - After defining the fields, navigate to the technical settings of the table. This is where you will specify the **data class** and **size category**.
+
+2. **Choosing Data Class and Size Category**
+   - Use the F4 help to select a data class (e.g., **`APPL0`**) and size category (e.g., **`0`**). These settings help manage the storage and organization of the table data.
+
+---
+
+## Step 3: Reference Table and Field Requirement
+
+1. **Importance of Reference Fields**
+   - For the total amount column (TA), you must specify a reference table and reference field. This is critical for defining the currency associated with the amount.
+
+2. **Understanding Amounts and Quantities**
+   - Amounts and quantities must be clearly defined. For example, stating "200" is meaningless without specifying whether it is in tk, dollars, etc. Similarly, a weight must be defined in kilograms or grams.
+
+3. **Setting Reference Table and Field**
+   - In the currency/quantity fields tab, specify the reference table and field. For our example, the reference field for currency is **`CURR`**.
+
+---
+
+## Step 4: Syntax Check and Activation
+
+1. **Checking Syntax**
+   - After completing the table setup, check the syntax using **Control + F2**. Address any warnings that may arise.
+
+2. **Activating the Table**
+   - Once the syntax is confirmed, activate the table. The table should now be in an active status, ready for use.
+
+---
+
+## Step 5: Summary of Table Creation Steps
+
+1. **Recap of Table Creation**
+   - In this session, we named the table, defined the fields, set the primary keys, configured technical settings, and specified reference fields for currency and amount.
+
+2. **Next Steps**
+   - We will continue with further configurations and functionalities in the next video.
+
+---
+
+## Conclusion
+Thank you for joining this session on Header Table Creation Part 2. Make sure to understand the importance of primary keys and how to set up technical settings for your tables. Please prepare any questions for our next discussion!
