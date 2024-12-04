@@ -1,0 +1,45 @@
+---
+title: "ABAP Dictionary - Table Maintenance Generator (Part 4)"
+description: "Table Maintenance Generator Part 4"
+date: "November 12, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+## Introduction
+In this session, we will summarize some important points regarding the **Table Maintenance Generator (TMG)** and discuss common mistakes that users often make. Understanding these points will help you effectively manage data in SAP tables using the TMG and transaction code **SM30**.
+
+---
+
+## Common Mistakes and Important Points
+
+### 1. Always Use "Display Maintenance Allowed"
+- When generating a Table Maintenance Generator and planning to maintain that table using SM30, it is crucial to select the option **Display Maintenance Allowed**. This option ensures that users can view and maintain the data effectively.
+- We will cover the details of the options available in future videos, but remember to always enable this setting when maintaining data.
+
+### 2. Newly Added Fields Do Not Appear Automatically
+- If you add new columns (fields) to an existing table, these newly added fields will **not** automatically appear in SM30.
+- For example, if you add a new field called **Delivery Number** (numeric, length 10), it will not show up in SM30 after you generate the TMG.
+- To make the new field visible:
+  1. Delete the existing TMG.
+  2. Regenerate the TMG.
+- After regenerating, the new column will appear in SM30, allowing you to maintain data for it.
+
+### 3. Deleting TMG Does Not Delete Table Data
+- Deleting the TMG does **not** result in the deletion of the actual table data. The data remains intact even if the TMG is removed.
+- If you cannot find the delete button for the TMG, ensure you are in **Change Mode** for the table. The delete option will only be visible in this mode.
+
+---
+
+## Additional Points
+
+### 4. Navigating to SM30 from Other Transactions
+- Once you have generated the TMG, you can navigate to SM30 from various transactions:
+  - From **SE11** (Data Dictionary), use **Utilities > Table Contents > Create Entries**.
+  - From **SE16**, clicking on the **Create Entries** button will take you to SM30.
+  - From **SE16N**, the **View Maintenance** button also directs you to SM30.
+- However, remember that in real-time projects, end users typically do not have access to SE11, SE16, or SE16N, so they will directly use SM30 to maintain data.
+
+---
+
+## Conclusion
+In this session, we discussed key points to remember when working with the Table Maintenance Generator, including common mistakes and how to navigate effectively within SAP. Remember to always enable **Display Maintenance Allowed**, regenerate your TMG after adding new fields, and understand that deleting the TMG does not affect the underlying table data. In our next video, we will explore further topics related to table maintenance. Thank you for your attention!

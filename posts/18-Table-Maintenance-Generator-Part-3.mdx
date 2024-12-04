@@ -1,0 +1,86 @@
+---
+title: "ABAP Dictionary - Table Maintenance Generator (Part 3)"
+description: "Table Maintenance Generator Part 3"
+date: "November 12, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+## Introduction
+In this session, we will continue our exploration of the **Table Maintenance Generator (TMG)**, focusing specifically on the two-step method. In our last video, we generated the TMG using the two-step approach, which allows both the overview screen and single screen to be applicable. Today, we will delve into how to use SM30 effectively and highlight the differences between the one-step and two-step methods.
+
+---
+
+## Step 1: Accessing the Table Maintenance Screen
+
+1. **Open Transaction SM30**
+   - Enter transaction code **SM30** in the command field.
+   - Click on the **Maintain** button to access the table.
+
+2. **Viewing Existing Records**
+   - You should see the existing records in the table. In this case, there are three records present.
+
+---
+
+## Step 2: Inserting New Data
+
+1. **Adding New Entries**
+   - Click on the **New Entries** button to insert a new record.
+   - Note that in the two-step method, you can only enter one record at a time. For example:
+     - **Order Number:** 4
+     - **Amount:** (Enter an amount)
+     - **Currency:** (Select the currency)
+
+2. **Using the Next Entry Button**
+   - To add another record, click on the **Next Entry** button. This allows you to enter the next record while keeping the previous one visible.
+   - For example:
+     - **Order Number:** 5
+   - After entering the details, click on **Save** to finalize your entries.
+
+---
+
+## Step 3: Changing and Deleting Records
+
+1. **Changing Record Details**
+   - To change details of a specific record, select the record and click on the **Details** button.
+   - For example, you can change the payment mode from Debit Card to Net Banking or adjust the amount.
+   - After making changes, click **Save** to apply them.
+
+2. **Deleting Records**
+   - You can delete records by selecting the desired entries and clicking on the **Delete** button.
+   - Alternatively, you can select a record, go to **Details**, and delete it from there.
+
+---
+
+## Step 4: Understanding the Overview and Single Screens
+
+1. **Overview Screen**
+   - When you access the table, the screen number is typically **1**, indicating that you are viewing the **Overview Screen**.
+   - This screen allows you to see all the records at once.
+
+2. **Single Screen**
+   - When you click on the **New Entries** button, the screen number changes to **2**, indicating that you are now in the **Single Screen** mode.
+   - This mode allows you to enter or edit one record at a time.
+
+3. **Verifying Screen Numbers**
+   - You can verify the current screen number by going to **System > Status**. 
+   - For example:
+     - Overview Screen: Screen number is 1
+     - Single Screen (when adding or changing a record): Screen number is 2
+
+---
+
+## Step 5: Comparing One-Step and Two-Step Methods
+
+1. **One-Step Method**
+   - In the one-step method, there is only one screen available for all operations. You can view and manage all records simultaneously.
+
+2. **Two-Step Method**
+   - In the two-step method, you have both overview and single screens. The overview screen allows you to see all records, while the single screen is used for entering or editing one record at a time.
+
+3. **Customer Preference**
+   - While both methods are valid, many customers prefer the one-step method for its simplicity and ease of use. 
+
+---
+
+## Conclusion
+In this session, we explored the two-step method of the Table Maintenance Generator, including how to insert, change, and delete records using transaction code SM30. We also discussed the differences between the one-step and two-step methods and why the one-step method is often preferred in projects. In our next video, we will continue to build on these concepts. Thank you for your attention!

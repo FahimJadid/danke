@@ -1,0 +1,68 @@
+---
+title: "ABAP Dictionary - Table Maintenance Generator (Part 1)"
+description: "Table Maintenance Generator Part 1"
+date: "November 12, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+## Introduction
+In this session, we will dive into the **Table Maintenance Generator (TMG)**, a critical tool for maintaining data in SAP tables. In our previous sessions, we learned how to access and maintain data using transaction codes like **SE11**, **SE16**, and **SE16N**. However, in a production system, end users typically do not have access to these transactions. So, how do they maintain data? This is where the Table Maintenance Generator comes into play.
+
+---
+
+## Step 1: Understanding the Table Maintenance Generator
+
+1. **What is TMG?**
+   - The Table Maintenance Generator (TMG) is a user-friendly interface that allows end users to maintain table data without needing direct access to SE11, SE16, or SE16N.
+
+2. **Transaction Code for TMG**
+   - Once we generate a TMG for a table, end users can maintain the data using transaction code **SM30**. This code is accessible to users, allowing them to manage data efficiently.
+
+---
+
+## Step 2: Generating the Table Maintenance Generator
+
+1. **Accessing the Table**
+   - Start by entering transaction code **SE11** to access the Data Dictionary.
+   - Switch to **Change Mode** for the table you want to generate the TMG for.
+
+2. **Navigating to TMG**
+   - From the menu, select **Utilities > Table Maintenance Generator**. This will open the TMG screen.
+
+3. **Authorization Group**
+   - The **Authorization Group** is crucial for controlling who can maintain the data. It defines a group of users with specific rights.
+   - Click on the F4 help button to choose an authorization group. For learning purposes, you can select the group **M%NCM%**. This group allows any user to maintain the data without additional checks.
+
+4. **Function Group**
+   - Enter the same table name in the **Function Group** field. This will link the TMG to the specific table.
+
+---
+
+## Step 3: Choosing Maintenance Types
+
+1. **Maintenance Types**
+   - There are two maintenance types in TMG:
+     - **One Step:** Only the overview screen is applicable.
+     - **Two Step:** Both the overview screen and single screen are applicable.
+
+2. **Selecting Maintenance Type**
+   - For this session, we will start with **One Step**. Click on **Find Screen Number** to automatically generate the screen number for the overview screen.
+
+3. **Switching to Two Step**
+   - If you choose **Two Step**, you can see both the overview and single screen numbers generated. This gives you more flexibility in how data is displayed and maintained.
+
+---
+
+## Step 4: Creating the Table Maintenance Generator
+
+1. **Generating the TMG**
+   - After selecting your preferred maintenance type (we will use One Step for now), click on the **Create** button to generate the TMG.
+   - Save your changes as a **Local Object**.
+
+2. **Completion Message**
+   - Once you receive the message "Request completed successfully," it indicates that your Table Maintenance Generator has been successfully generated.
+
+---
+
+## Conclusion
+In this session, we learned about the importance of the Table Maintenance Generator and how to generate it for a specific table. This tool allows end users to maintain data securely without accessing sensitive transaction codes. In our next video, we will explore how to use the generated TMG to maintain data in the table. Thank you for your attention!

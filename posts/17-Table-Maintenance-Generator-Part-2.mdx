@@ -1,0 +1,85 @@
+---
+title: "ABAP Dictionary - Table Maintenance Generator (Part 2)"
+description: "Table Maintenance Generator Part 2"
+date: "November 12, 2024"
+---
+![SAP](https://succulent-stove-12a.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F8bbce9c0-45a0-4162-9a90-243dce2dbe85%2F3a20fc21-1fd6-4168-9094-270b2920c51d%2FSAP_2011_logo.svg.png?table=block&id=14f7c3e9-c0a8-80a8-b232-d6ef8f968d52&spaceId=8bbce9c0-45a0-4162-9a90-243dce2dbe85&userId=&cache=v2)
+
+## Introduction
+Welcome back to our discussion on the **Table Maintenance Generator (TMG)**. In our previous video, we generated the TMG using the one-step method. Today, we will focus on how to maintain data in the table using the TMG we created. We will be using transaction code **SM30** for this purpose.
+
+---
+
+## Step 1: Accessing the Table Maintenance Screen
+
+1. **Open Transaction SM30**
+   - Start by entering transaction code **SM30** in the command field.
+   - Enter the name of the table for which you generated the TMG and click on the **Maintain** button.
+
+2. **Viewing Existing Entries**
+   - You should see the existing entries in the table. In this case, there are already three entries present.
+
+---
+
+## Step 2: Inserting New Data
+
+1. **Adding New Entries**
+   - To insert new data, click on the **New Entries** button.
+   - Fill in the fields for the new record:
+     - **Order Number:** 4
+     - **Order Date:** (Select a date)
+     - **Payment Mode:** (Choose from the dropdown, e.g., Credit Card, Debit Card, Net Banking)
+     - **Total Amount:** (Enter an amount)
+     - **Currency:** (Select the currency, e.g., INR)
+
+2. **Inserting Multiple Records**
+   - You can insert additional records by repeating the process. For example, create another entry with:
+     - **Order Number:** 5
+     - **Payment Mode:** (Choose another option)
+     - **Total Amount:** (Enter an amount)
+     - **Currency:** (Select the currency)
+
+3. **Saving the Entries**
+   - After entering the new records, click on the **Save** button. You should see a confirmation message, and the number of records in the table should now reflect the new entries.
+
+---
+
+## Step 3: Deleting and Changing Records
+
+1. **Deleting Records**
+   - To delete records, select the entries you want to remove and click on the **Minus** button. 
+   - After confirming the deletion, click **Save** to finalize the changes.
+
+2. **Changing Existing Records**
+   - To change a specific value (e.g., changing the payment mode from Debit Card to Credit Card), select the record and make the necessary changes.
+   - Click **Save** to apply the changes. Remember, you can only change non-primary key data.
+
+---
+
+## Step 4: Understanding the Overview Screen
+
+1. **Overview Screen in One Step**
+   - In the one-step method, you only have one type of screen, which is the **Overview Screen**. 
+   - To check the screen number, click on the **Maintain** button, then go to **System > Status**. You will see that the screen number is 1.
+
+2. **Consistent Screen Number**
+   - Even when adding new entries, the screen number remains the same (1) because the one-step method only allows for an overview screen.
+
+---
+
+## Step 5: Generating the Table Maintenance Generator Using Two Steps
+
+1. **Deleting the One-Step TMG**
+   - If you want to explore more options, you can delete the TMG generated using the one-step method.
+
+2. **Generating TMG Using Two Steps**
+   - Navigate to **Utilities > Table Maintenance Generator** and enter the same table name in the function group.
+   - Select **Two Step** and find the screen number. You will notice that both the overview screen and the single screen are now applicable.
+
+3. **Creating the TMG**
+   - Click on **Create** and save your changes. You should see a message indicating that the request was completed successfully.
+
+---
+
+## Conclusion
+In this session, we learned how to maintain data in a table using the TMG generated through the one-step method. We also explored how to delete and change records. Additionally, we discussed the differences between generating a TMG using one step versus two steps. In our next video, we will continue to explore the differences in functionality when using the two-step TMG. Thank you for your attention!
